@@ -2,9 +2,18 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('../images/testbackground.jpeg') no-repeat center center fixed;
+    background: url('../images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 header {
@@ -42,8 +51,8 @@ nav ul li a:hover {
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 100%; /* Add this line to position the dropdown below the button */
-    left: 0; /* Ensure the dropdown aligns with the left edge of the button */
+    top: 100%;
+    left: 0;
 }
 
 .dropdown-content a {
@@ -61,12 +70,45 @@ nav ul li a:hover {
     display: block;
 }
 
+.logo-container {
+    text-align: center;
+    margin: 20px 0; /* Add margin to separate the logo from other content */
+}
+
+.logo {
+    max-width: 800px; /* Adjust the size of the logo as needed */
+    height: auto;
+}
+
 main {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    flex: 1;
+}
+
+.achievement {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the content */
+}
+
+.image-container {
+    margin: 20px auto; /* Center the container */
+    max-width: 600px; /* Set a maximum width for the images */
+}
+
+.image-container img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -74,7 +116,5 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
     width: 100%;
-    bottom: 0;
 }
