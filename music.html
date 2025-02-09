@@ -14,6 +14,15 @@
         #music-list audio {
             display: block;
             margin-top: 10px;
+            width: 100%; /* Make the audio player responsive */
+            max-width: 600px; /* Optional: Set a maximum width */
+        }
+        .mejs-container {
+            width: 100% !important; /* Ensure the MediaElement.js container is responsive */
+            max-width: 600px; /* Optional: Set a maximum width */
+        }
+        .mejs-container .mejs-controls {
+            width: 100% !important; /* Ensure the controls are responsive */
         }
     </style>
 </head>
