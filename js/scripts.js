@@ -1,28 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const guildName = "Babes";
-    const realm = "ravencrest";
-    const region = "eu";
+    const musicList = document.getElementById("music-list");
 
-    fetch(`https://raider.io/api/v1/guilds/profile?region=${region}&realm=${realm}&name=${guildName}&fields=raid_progression`)
-        .then(response => response.json())
-        .then(data => {
-            const progressionData = data.raid_progression;
-            const progressionContainer = document.getElementById("progression-data");
+    // List of music files (you can automate this with server-side code)
+    const musicFiles = [
+        "song1.mp3",
+        "song2.mp3",
+        "song3.mp3",
+        "song4.mp3",
+        "song5.mp3"
+    ];
 
-            for (const raid in progressionData) {
-                const raidInfo = progressionData[raid];
-                const raidElement = document.createElement("div");
-                raidElement.classList.add("raid");
-
-                raidElement.innerHTML = `
-                    <h3>${raid}</h3>
-                    <p>Normal: ${raidInfo.summary.normal_bosses_killed}/${raidInfo.total_bosses}</p>
-                    <p>Heroic: ${raidInfo.summary.heroic_bosses_killed}/${raidInfo.total_bosses}</p>
-                    <p>Mythic: ${raidInfo.summary.mythic_bosses_killed}/${raidInfo.total_bosses}</p>
-                `;
-
-                progressionContainer.appendChild(raidElement);
-            }
-        })
-        .catch(error => console.error("Error fetching guild progression data:", error));
+    musicFiles.forEach(file => {
+        const listItem = document.createElement("li");
+        const audioElement = document.createElement("audio");
+        audioElement.controls = true;
+        audioElement.src = `music/${file}`;
+        listItem.appendChild(audioElement);
+        musicList.appendChild(listItem);
+    });
 });
