@@ -24,6 +24,16 @@
         .mejs-container .mejs-controls {
             width: 100% !important; /* Ensure the controls are responsive */
         }
+        @media (max-width: 600px) {
+            .mejs-container {
+                width: 100% !important; /* Ensure the MediaElement.js container is responsive on mobile */
+                max-width: 100% !important; /* Ensure it doesn't exceed the container width on mobile */
+            }
+            #music-list audio {
+                width: 100%; /* Make the audio player responsive on mobile */
+                max-width: 100%; /* Ensure it doesn't exceed the container width on mobile */
+            }
+        }
     </style>
 </head>
 <body>
