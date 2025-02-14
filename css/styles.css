@@ -26,11 +26,12 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
     position: relative;
 }
 
@@ -38,10 +39,12 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #555;
 }
 
 .dropdown-content {
@@ -72,13 +75,44 @@ nav ul li a:hover {
 
 .logo-container {
     text-align: center;
-    margin: 20px 0; /* Add margin to separate the logo from other content */
+    margin: 20px 0;
 }
 
 .logo {
-    max-width: 100%; /* Adjust the size of the logo as needed */
+    width: 100%;
     height: auto;
-    max-width: 800px;
+    max-width: 880px;
+}
+
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.hero a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero a:hover {
+    background-color: #ff4500;
 }
 
 main {
@@ -90,32 +124,25 @@ main {
     flex: 1;
 }
 
-.achievement {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
+section {
+    margin: 40px 0;
+}
+
+section h2 {
+    text-align: center;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center the content */
 }
 
-.image-container {
-    margin: 20px auto; /* Center the container */
-    max-width: 600px; /* Set a maximum width for the images */
-}
-
-.image-container img {
-    width: 100%; /* Ensure images are responsive */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 footer {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
     width: 100%;
 }
