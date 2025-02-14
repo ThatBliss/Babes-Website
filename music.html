@@ -8,8 +8,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css">
     <style>
+        #music-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
         #music-list li {
+            list-style: none;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        #music-list audio {
+            display: block;
+            margin-top: 10px;
+            width: 100%; /* Make the audio player responsive */
+            max-width: 100%; /* Ensure it doesn't exceed the container width */
+        }
+        .mejs-container {
+            width: 100% !important; /* Ensure the MediaElement.js container is responsive */
+            max-width: 100% !important; /* Ensure it doesn't exceed the container width */
+        }
+        .mejs-container .mejs-controls {
+            width: 100% !important; /* Ensure the controls are responsive */
+        }
+        @media (max-width: 900px) {
+            #music-list {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+        @media (max-width: 600px) {
+            #music-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        .music {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the content */
         }
     </style>
 </head>
@@ -46,29 +87,42 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="music">
             <h2>Guild Music Playlist</h2>
-            <h2>!UNDER DEVELOPMENT!</h2>
             <p>Here is music that we made, mostly for banter but yeah.</p>
             <ul id="music-list">
                 <li>
-                    <strong>Rotter the guild mother - Derpastation</strong>
+                    <strong>Rotter the guild mother</strong>
                     <audio controls class="mejs-player">
                         <source src="music/Rotter the guild mother.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </li>
                 <li>
-                    <strong>unfuck me - TEST FILE</strong>
+                    <strong>Journey to Nerubar</strong>
                     <audio controls class="mejs-player">
-                        <source src="music/unfuck me.mp3" type="audio/mpeg">
+                        <source src="music/Journey to Nerubar.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </li>
                 <li>
-                    <strong>Song Title 3 - Artist</strong>
+                    <strong>The Ballad of Grim Batol</strong>
                     <audio controls class="mejs-player">
-                        <source src="music/song3.mp3" type="audio/mpeg">
+                        <source src="music/The Ballad of Grim Batol.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li>
+                    <strong>Sniff Addict</strong>
+                    <audio controls class="mejs-player">
+                        <source src="music/Sniff Addict.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </li>
+                <li>
+                    <strong>Winter's Zugzug</strong>
+                    <audio controls class="mejs-player">
+                        <source src="music/Winter's Zugzug.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
                 </li>
@@ -79,14 +133,9 @@
     <footer>
         <p>&copy; 2025 Babes Guild. All rights reserved.</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+    <script></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const players = document.querySelectorAll('audio.mejs-player');
-            players.forEach(player => {
-                new MediaElementPlayer(player);
-            });
-        });
+
     </script>
 </body>
 </html>
