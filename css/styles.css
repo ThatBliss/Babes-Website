@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background: url('../images/background.jpg') no-repeat center center fixed;
@@ -95,6 +95,10 @@ nav ul li a:hover {
 .hero h1 {
     font-size: 3em;
     margin: 0;
+    color: #ff6347; /* Change the color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Make it uppercase */
 }
 
 .hero p {
